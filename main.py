@@ -256,7 +256,7 @@ class MineSweeper(object):
 			self.update_record()
 
 	def update_record(self):
-		if self.record[self.difficulty][0] > int(self.current_time) and self.difficulty < 3:
+		if self.difficulty < 3 and self.record[self.difficulty][0] > int(self.current_time):
 			self.record[self.difficulty][0] = int(self.current_time)-1
 			self.record[self.difficulty][1] = self.ask_record_name()
 			with open('minesweeper_record.dat', 'wb') as record_file:
