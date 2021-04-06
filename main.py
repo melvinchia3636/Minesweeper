@@ -28,17 +28,17 @@ import os
 class Counter(object):
 	def __init__(self):
 		self.sec_block = [
-				 		 [1, 1, 1, 0, 1, 1, 1],
-						 [0, 0, 1, 0, 0, 1, 0], 
-						 [1, 0, 1, 1, 1, 0, 1], 
-						 [1, 0, 1, 1, 0, 1, 1],
-						 [0, 1, 1, 1, 0, 1, 0],
-						 [1, 1, 0, 1, 0, 1, 1],
-						 [1, 1, 0, 1, 1, 1, 1],
-						 [1, 0, 1, 0, 0, 1, 0],
-						 [1, 1, 1, 1, 1, 1, 1],
-						 [1, 1, 1, 1, 0, 1, 1]
-						 ]
+             [1, 1, 1, 0, 1, 1, 1],
+             [0, 0, 1, 0, 0, 1, 0], 
+             [1, 0, 1, 1, 1, 0, 1], 
+             [1, 0, 1, 1, 0, 1, 1],
+             [0, 1, 1, 1, 0, 1, 0],
+             [1, 1, 0, 1, 0, 1, 1],
+             [1, 1, 0, 1, 1, 1, 1],
+             [1, 0, 1, 0, 0, 1, 0],
+             [1, 1, 1, 1, 1, 1, 1],
+             [1, 1, 1, 1, 0, 1, 1]
+         ]
 
 	def draw(self, canvas, sec):
 		canvas.create_polygon(3, 2, 11, 2, 9, 4, 5, 4, outline='red' if self.sec_block[sec][0] else 'black', fill='red' if self.sec_block[sec][0] else 'black')
@@ -51,7 +51,6 @@ class Counter(object):
 
 #Main Class for the game
 class MineSweeper(object):
-
 	#initialize all the required stuff
 	def __init__(self, root, difficulty=0):
 		#variable
